@@ -1,0 +1,80 @@
+{
+	"variables": [],
+	"info": {
+		"name": "getPopular",
+		"_postman_id": "6572be4c-e4d3-f27d-eb6f-2b6e2c7fce17",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getPopular_api",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"response code is 200\"] = responseCode.code === 200;",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"url": {
+					"raw": "https://www.flickr.com/services/rest/?method=flickr.photos.getPopular&api_key=343be61744a039016ef02a4bee0e3745&user_id=193993151%40N07&format=json&nojsoncallback=1",
+					"protocol": "https",
+					"host": [
+						"www",
+						"flickr",
+						"com"
+					],
+					"path": [
+						"services",
+						"rest",
+						""
+					],
+					"query": [
+						{
+							"key": "method",
+							"value": "flickr.photos.getPopular",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "api_key",
+							"value": "343be61744a039016ef02a4bee0e3745",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "user_id",
+							"value": "193993151%40N07",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "format",
+							"value": "json",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "nojsoncallback",
+							"value": "1",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

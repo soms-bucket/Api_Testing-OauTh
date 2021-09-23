@@ -1,0 +1,274 @@
+{
+	"variables": [],
+	"info": {
+		"name": "O-auth_flicker",
+		"_postman_id": "9c044cbb-3d5e-e1ac-1018-97cf647c54b0",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "1-request",
+			"request": {
+				"url": {
+					"raw": "https://www.flickr.com/services/oauth/request_token?oauth_consumer_key=343be61744a039016ef02a4bee0e3745&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1632399365&oauth_nonce=mLTgDK&oauth_version=1.0&oauth_signature=1ofeIq0cwk1GF1hzYP/bBboafsI=&oauth_callback=http://example.com",
+					"protocol": "https",
+					"host": [
+						"www",
+						"flickr",
+						"com"
+					],
+					"path": [
+						"services",
+						"oauth",
+						"request_token"
+					],
+					"query": [
+						{
+							"key": "oauth_consumer_key",
+							"value": "343be61744a039016ef02a4bee0e3745",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "oauth_signature_method",
+							"value": "HMAC-SHA1",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "oauth_timestamp",
+							"value": "1632399365",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "oauth_nonce",
+							"value": "mLTgDK",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "oauth_version",
+							"value": "1.0",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "oauth_signature",
+							"value": "1ofeIq0cwk1GF1hzYP/bBboafsI=",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "oauth_callback",
+							"value": "http://example.com",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "2-access",
+			"request": {
+				"url": {
+					"raw": "https://www.flickr.com/services/oauth/authorize?oauth_token=72157720815693407-feec6a383b342142",
+					"protocol": "https",
+					"host": [
+						"www",
+						"flickr",
+						"com"
+					],
+					"path": [
+						"services",
+						"oauth",
+						"authorize"
+					],
+					"query": [
+						{
+							"key": "oauth_token",
+							"value": "72157720815693407-feec6a383b342142",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "3-access token",
+			"request": {
+				"url": {
+					"raw": "https://www.flickr.com/services/oauth/access_token?oauth_consumer_key=343be61744a039016ef02a4bee0e3745&oauth_token=72157720815693407-feec6a383b342142&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1632399565&oauth_nonce=0qw3Hs&oauth_version=1.0&oauth_signature=flevRe6Jy7eJrZ6Q8InRmQl03ag=&oauth_verifier=f090fd401120f3c7",
+					"protocol": "https",
+					"host": [
+						"www",
+						"flickr",
+						"com"
+					],
+					"path": [
+						"services",
+						"oauth",
+						"access_token"
+					],
+					"query": [
+						{
+							"key": "oauth_consumer_key",
+							"value": "343be61744a039016ef02a4bee0e3745",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "oauth_token",
+							"value": "72157720815693407-feec6a383b342142",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "oauth_signature_method",
+							"value": "HMAC-SHA1",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "oauth_timestamp",
+							"value": "1632399565",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "oauth_nonce",
+							"value": "0qw3Hs",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "oauth_version",
+							"value": "1.0",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "oauth_signature",
+							"value": "flevRe6Jy7eJrZ6Q8InRmQl03ag=",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "oauth_verifier",
+							"value": "f090fd401120f3c7",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "4-Get DATA",
+			"request": {
+				"url": {
+					"raw": "https://www.flickr.com/services/rest?oauth_consumer_key=343be61744a039016ef02a4bee0e3745&oauth_token=72157720815687458-cf9f36c07fe031af&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1632397799&oauth_nonce=hRc6kq&oauth_version=1.0&oauth_signature=va3pE0ufav8lAq31wqfDR/k0bLg=&nojsoncallback=1&format=json&method=flickr.test.login",
+					"protocol": "https",
+					"host": [
+						"www",
+						"flickr",
+						"com"
+					],
+					"path": [
+						"services",
+						"rest"
+					],
+					"query": [
+						{
+							"key": "oauth_consumer_key",
+							"value": "343be61744a039016ef02a4bee0e3745",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "oauth_token",
+							"value": "72157720815687458-cf9f36c07fe031af",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "oauth_signature_method",
+							"value": "HMAC-SHA1",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "oauth_timestamp",
+							"value": "1632397799",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "oauth_nonce",
+							"value": "hRc6kq",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "oauth_version",
+							"value": "1.0",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "oauth_signature",
+							"value": "va3pE0ufav8lAq31wqfDR/k0bLg=",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "nojsoncallback",
+							"value": "1",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "format",
+							"value": "json",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "method",
+							"value": "flickr.test.login",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

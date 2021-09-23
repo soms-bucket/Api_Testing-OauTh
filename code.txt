@@ -1,0 +1,1 @@
+tests["response code is 200"] = responseCode.code === 200;
